@@ -110,7 +110,7 @@
 
 		$.ajax({
 			method : "GET",
-			url : ctx + "/api/getUsers/",
+			url : ctx + "/api/getStrings/",
 			success : function(response) {
 			alert("succes");
 /* 				$("#usersList").append(response.nume+" varsta:"+response.varsta);

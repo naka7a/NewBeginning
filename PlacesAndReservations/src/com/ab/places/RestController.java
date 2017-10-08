@@ -56,6 +56,23 @@ public class RestController {
 		return new ResponseEntity<List<User>>(users,HttpStatus.OK);
 	}
 	
+	@RequestMapping(value="/getStrings", method=RequestMethod.GET )
+	@ResponseBody
+	public String getInfos(){
+		
+		System.out.println("Intra pe getUsers");
+		UserService us = new UserService();
+		List<User> users = new ArrayList<User>();
+		users = us.getUsers();
+		
+		for(User user: users){
+			System.out.println(user.getNume()+" "+user.getVarsta());
+		}
+		
+
+		return "hello";
+	}
+	
 	
 	
 }
