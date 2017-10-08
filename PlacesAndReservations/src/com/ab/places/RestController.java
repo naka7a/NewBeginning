@@ -70,7 +70,7 @@ public class RestController {
 		}
 		
 
-		return "hello";
+		return "restaurant Caru cu bani";
 	}
 	
 	

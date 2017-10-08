@@ -1,0 +1,157 @@
+header{
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #e4e4e4;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav{
+  width: calc(100% - 60px);
+  max-width: 2400px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.info-top{
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+}
+
+.logo{
+  display: inline-block;
+  width: 60px;
+}
+
+.search-field{
+  color: #484848;
+  border-radius: 4px;
+  border: 1px solid #DBDBDB;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.08);
+  padding: 0px;
+  display: inline-block;
+  height: 38px;
+  width: 40%;
+  position: relative;
+}
+
+.search-field ul{
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  list-style-type: none;
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.search-field li{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 33.33%;
+}
+
+.search-field span.search-icons{
+  display: inline-block;
+  height: 14px;
+  position: relative;
+  top: 2px;
+  right: 6px;
+}
+
+.time{
+  border-left: 1px solid #DBDBDB;
+  border-right: 1px solid #DBDBDB;
+}
+
+.user-pannel{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 50px;
+}
+
+.user-pannel-container{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.user-arrow{
+  display: table-cell;
+  vertical-align: middle;
+  width: 30px;
+  padding: 5px;
+}
+
+.user-profile{
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 80px;
+  background: url(assets/profile/default.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.wrapper{
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  max-width: 2400px;
+}
+
+main{
+  margin-top: 30px;
+}
+
+.rst{
+  display: table;
+  /*background-color: #ccc;*/
+  border: 1px solid #DBDBDB;
+  width: 100%;
+  height: 230px;
+  margin-bottom: 30px;
+
+}
+
+.rst-hero{
+  display: table-cell;
+  width: 50%;
+  height: 100%;
+  background: url(assets/restaurants/default.jpeg) center center no-repeat;
+  background-size: cover;
+}
+
+.rst-info{
+  display: table-cell;
+  vertical-align: top;
+}
+
+.rst-info h3{
+  margin: 30px;
+  padding: 0;
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 24px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.rst-info span.rst-description{
+  margin-left: 30px;
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 600;
+  color: #ccc;
+}
+
+
+

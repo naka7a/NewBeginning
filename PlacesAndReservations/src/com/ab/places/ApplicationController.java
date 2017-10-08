@@ -27,4 +27,13 @@ public class ApplicationController {
 		return model;
 		
 	}
+	
+	@RequestMapping("/userView")
+	public ModelAndView userView(){
+		System.out.println("ajunge");
+		ModelAndView model = new ModelAndView("UserView");
+		
+		return model;
+		
+	}
 }
