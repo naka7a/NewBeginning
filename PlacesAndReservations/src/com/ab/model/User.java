@@ -5,13 +5,15 @@ package com.ab.model;
 public class User {
 	
 	private String nume;
-	private String varsta;
+	private String email;
+	private int id;
 	
 	
-	public User(String nume, String varsta) {
+	public User(String nume, String email,int id) {
 		super();
 		this.nume = nume;
-		this.varsta = varsta;
+		this.email = email;
+		this.id = id;
 	}
 	
 	
@@ -21,11 +23,21 @@ public class User {
 	public void setNume(String nume) {
 		this.nume = nume;
 	}
-	public String getVarsta() {
-		return varsta;
+	public String getEmail() {
+		return email;
 	}
-	public void setVarsta(String varsta) {
-		this.varsta = varsta;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 	

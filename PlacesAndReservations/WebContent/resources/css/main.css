@@ -1,0 +1,255 @@
+header{
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #e4e4e4;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav{
+  width: calc(100% - 60px);
+  max-width: 2400px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.info-top{
+  display: table;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+}
+
+.logo{
+  display: table-cell;
+  width: 60px;
+  vertical-align: middle;
+}
+
+.search-options-container, .search-field-container{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.search-options-container{
+  width: 35%;
+}
+
+.search-field-container{
+  padding: 0 30px;
+  position: relative;
+}
+
+.search-options, .search-field{
+  color: #484848;
+  border-radius: 4px;
+  border: 1px solid #DBDBDB;
+  box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.08);
+  padding: 0px;
+  display: inline-block;
+  height: 38px;
+  width: 100%;
+  position: relative;
+}
+
+.search-field{
+  width: 70%;
+  position: relative;
+  color: #bbb;
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+.search-options ul{
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  list-style-type: none;
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.search-options li{
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 33.33%;
+}
+
+.search-options span.search-icons{
+  display: inline-block;
+  position: absolute;
+  z-index: 30;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-55%);
+     -moz-transform: translateY(-55%);
+      -ms-transform: translateY(-55%);
+       -o-transform: translateY(-55%);
+          transform: translateY(-55%);
+  height: 14px;
+}
+
+.time{
+  border-left: 1px solid #DBDBDB;
+  border-right: 1px solid #DBDBDB;
+}
+
+/*.search-field input{
+  width: 100%;
+  height: 90%;
+  border: 0px;
+}*/
+
+.user-pannel{
+  display: table-cell;
+  width: 80px;
+  height: 50px;
+}
+
+.user-pannel-container{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.user-arrow{
+  display: table-cell;
+  vertical-align: middle;
+  width: 30px;
+  padding: 5px;
+}
+
+.user-profile{
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 80px;
+  background: url(assets/users/profile/default.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.wrapper{
+  width: calc(100% - 60px);
+  margin: 0 auto;
+  max-width: 2400px;
+}
+
+main{
+  margin-top: 120px;
+}
+
+.rst{
+  display: table;
+  border: 1px solid #DBDBDB;
+  width: 100%;
+  height: 230px;
+  margin-bottom: 30px;
+
+}
+
+.rst-hero{
+  display: table-cell;
+  width: 50%;
+  height: 100%;
+  background: url(assets/restaurants/default.jpeg) center center no-repeat;
+  background-size: cover;
+}
+
+.rst-info{
+  display: table-cell;
+  vertical-align: top;
+  position: relative;
+  padding: 30px;
+}
+
+.rst-info h3{
+  display: inline-block;  
+  margin: 0 0 30px 0;
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 24px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.rst-rating{
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: #bbb;
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 12px;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+.rst-rating-stars::after{
+  content: "by Tripadvizor";
+}
+
+.star-svg, .star-empty-svg, .star-half-svg{
+  width: 15px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.tripadvizor-svg{
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.rst-info span.rst-description{
+  display: block;
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.rst-info span.rst-reserve-btn{
+  position: absolute;
+  bottom: 30px;
+  right: 90px;
+  display: block;
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+  font-weight: 400;
+  opacity: 0.5;
+  color: #3498db;
+  border-bottom:2px dotted #3498db;
+}
+
+.rst-info span.rst-menu-icon{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: #bbb;
+  cursor: pointer;
+}
+
+.menu-svg{
+  width: 30px;
+  height: 30px;
+  display: block;
+  fill: currentColor;
+}
+
+
+
+

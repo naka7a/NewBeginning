@@ -9,14 +9,19 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="<c:url value="/resources/bootstrap/js/jquery-3.2.1.min.js" />"></script>
+
+    <link href="<c:url value="/resources/bootstrap/css/bootstrap.min.css" />" rel="stylesheet">
+    <link href="<c:url value="/resources/fa/css/font-awesome.min.css" />" rel="stylesheet">
+    
+    
+    <script src="<c:url value="/resources/bootstrap/js/bootstrap.min.js" />"></script>
+
 </head>
 <body>
 	<div class="jumbotron" style="background-color:black;color:white;font-weight:bold;font-size:20pt">
-			<span class="glyphicon glyphicon-glass"> Places & Reservations</span>
+	<i class="fa fa-camera-retro fa-lg"> Places And Reservations</i>
 	</div>
 	
 	<h3>Restaurant View</h3>
@@ -33,7 +38,7 @@
   		<input type="text" class="form-control" id="mese">
 	</div>
 	
-	<button class="btn btn-primary">Trimite</button>
+	<button class="btn btn-primary" onclick="sendDataToServer()">Trimite</button>
 	<button class="btn btn-danger" onclick="getDataFromServer()">Test</button>
 		<button class="btn btn-danger" onclick="getUsersFromServer()">get users from server!</button>
 	
@@ -66,19 +71,22 @@
 
 	function sendDataToServer() {
 		var ctx = "${pageContext.request.contextPath}";
+		alert("daa");
 
 		var obj = {
-			nume : $("#nume").val(),
-			mese : $("#mese").val()
+
 		};
 		
 		alert("daa");
 		
 		$.ajax({
-			type : "POST",
-			url : ctx + "/rest/receive/",
-			data : JSON.stringify(obj),
-			success : function(data) {
+			method : "POST",
+			url : ctx + "/api/recive/",
+			data : {
+				"nume" : $("#nume").val(),
+				"mese" : $("#mese").val()
+			},
+			success : function() {
 				alert("data has been sent");
 			},
 			error : function() {
@@ -110,11 +118,12 @@
 
 		$.ajax({
 			method : "GET",
-			url : ctx + "/api/getStrings/",
+			url : ctx + "/api/getUsers/",
 			success : function(response) {
-			alert("succes");
-/* 				$("#usersList").append(response.nume+" varsta:"+response.varsta);
- */			},
+				for (var i in response){
+					$("#usersList").append(response[i].nume+" varsta:"+response[i].varsta);
+				}
+			},
 			error : function() {
 				alert("eroare");
 			}
