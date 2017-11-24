@@ -1,4 +1,7 @@
 header{
+  position: fixed;
+  top: 0;
+  z-index: 3;
   width: 100%;
   height: 80px;
   background-color: #fff;
@@ -15,7 +18,7 @@ nav{
 }
 
 .info-top{
-  display: block;
+  display: table;
   position: absolute;
   width: 100%;
   top: 50%;
@@ -24,11 +27,26 @@ nav{
 }
 
 .logo{
-  display: inline-block;
+  display: table-cell;
   width: 60px;
+  vertical-align: middle;
 }
 
-.search-field{
+.search-options-container, .search-field-container{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.search-options-container{
+  width: 35%;
+}
+
+.search-field-container{
+  padding: 0 30px;
+  position: relative;
+}
+
+.search-options, .search-field{
   color: #484848;
   border-radius: 4px;
   border: 1px solid #DBDBDB;
@@ -36,11 +54,21 @@ nav{
   padding: 0px;
   display: inline-block;
   height: 38px;
-  width: 40%;
+  width: 100%;
   position: relative;
 }
 
-.search-field ul{
+.search-field{
+  width: 70%;
+  position: relative;
+  color: #bbb;
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+.search-options ul{
   font-family: Helvetica Neue, sans-serif;
   font-size: 14px;
   line-height: 16px;
@@ -52,19 +80,26 @@ nav{
   padding: 0;
 }
 
-.search-field li{
+.search-options li{
+  position: relative;
   display: table-cell;
   text-align: center;
   vertical-align: middle;
   width: 33.33%;
 }
 
-.search-field span.search-icons{
+.search-options span.search-icons{
   display: inline-block;
+  position: absolute;
+  z-index: 30;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-55%);
+     -moz-transform: translateY(-55%);
+      -ms-transform: translateY(-55%);
+       -o-transform: translateY(-55%);
+          transform: translateY(-55%);
   height: 14px;
-  position: relative;
-  top: 2px;
-  right: 6px;
 }
 
 .time{
@@ -72,10 +107,14 @@ nav{
   border-right: 1px solid #DBDBDB;
 }
 
+/*.search-field input{
+  width: 100%;
+  height: 90%;
+  border: 0px;
+}*/
+
 .user-pannel{
-  position: absolute;
-  right: 0;
-  top: 0;
+  display: table-cell;
   width: 80px;
   height: 50px;
 }
@@ -98,7 +137,7 @@ nav{
   width: 50px;
   height: 50px;
   border-radius: 80px;
-  background: url(assets/profile/default.jpg) center center no-repeat;
+  background: url(assets/users/profile/default.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -109,12 +148,11 @@ nav{
 }
 
 main{
-  margin-top: 30px;
+  margin-top: 120px;
 }
 
 .rst{
   display: table;
-  /*background-color: #ccc;*/
   border: 1px solid #DBDBDB;
   width: 100%;
   height: 230px;
@@ -133,25 +171,85 @@ main{
 .rst-info{
   display: table-cell;
   vertical-align: top;
+  position: relative;
+  padding: 30px;
 }
 
 .rst-info h3{
-  margin: 30px;
-  padding: 0;
+  display: inline-block;  
+  margin: 0 0 30px 0;
   font-family: Helvetica Neue, sans-serif;
   font-size: 24px;
   line-height: 16px;
   font-weight: 600;
 }
 
+.rst-rating{
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: #bbb;
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 12px;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+.rst-rating-stars::after{
+  content: "by Tripadvizor";
+}
+
+.star-svg, .star-empty-svg, .star-half-svg{
+  width: 15px;
+  height: 12px;
+  fill: currentColor;
+}
+
+.tripadvizor-svg{
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
 .rst-info span.rst-description{
-  margin-left: 30px;
+  display: block;
   font-family: Helvetica Neue, sans-serif;
   font-size: 12px;
   line-height: 14px;
-  font-weight: 600;
+  font-weight: 500;
   color: #ccc;
 }
+
+.rst-info span.rst-reserve-btn{
+  position: absolute;
+  bottom: 30px;
+  right: 90px;
+  display: block;
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 14px;
+  line-height: 1.2em;
+  font-weight: 400;
+  opacity: 0.5;
+  color: #3498db;
+  border-bottom:2px dotted #3498db;
+}
+
+.rst-info span.rst-menu-icon{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: #bbb;
+  cursor: pointer;
+}
+
+.menu-svg{
+  width: 30px;
+  height: 30px;
+  display: block;
+  fill: currentColor;
+}
+
 
 
 
